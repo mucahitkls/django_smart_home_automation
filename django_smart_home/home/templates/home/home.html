@@ -1,0 +1,29 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-4">
+    <h1>Welcome to Smart Home Automation</h1>
+    <p>Control and monitor your home devices from anywhere. Our application allows you to connect multiple devices across various rooms in your home, ensuring you have total control and convenience at your fingertips.</p>
+
+    <!-- Row for images and text -->
+    <div class="row">
+        <div class="col-md-6 mt-4" >
+            <img src="{% static 'home/home_page_image.jpeg' %}" alt="Home Automation" class="img-fluid mt-4">
+        </div>
+        <div class="col-md-6 mt-4">
+            <h3>Manage Multiple Devices</h3>
+            <p>Connect and control your lights, TV, thermostat, and more through our user-friendly interface.</p>
+            <h3>Multiple Homes, One App</h3>
+            <p>Whether you're managing your primary residence, vacation home, or rental property, our app consolidates control into a single, easy-to-use platform.</p>
+        </div>
+    </div>
+
+    <!-- Call to action buttons -->
+    {% if user.is_authenticated %}
+        <a href="{% url 'house-list' %}" class="btn btn-primary">Houses</a>
+        {% else %}
+        <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+        <a href="{% url 'login' %}" class="btn btn-secondary">Login</a>
+        {% endif %}
+</div>
+{% endblock content %}

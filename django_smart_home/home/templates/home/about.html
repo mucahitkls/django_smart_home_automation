@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home-page' %}">SmartHome</a>
+        <!-- Navbar content here -->
+    </nav>
+
+    <div class="container mt-4">
+        <h1>About Smart Home Automation</h1>
+
+        <section class="mt-4">
+            <h2>Our Framework</h2>
+            <p>
+                This application is built using the <strong>Django Web Framework</strong>, a high-level Python web framework that encourages rapid development and clean, pragmatic design. Django is known for its simplicity, flexibility, reliability, and scalability. Django also provides an admin interface and tools for building web APIs, making it a great choice for developing complex web applications like our Smart Home Automation system.
+            </p>
+        </section>
+
+        <section class="mt-4">
+            <h2>Project Logic</h2>
+            <p>
+                The logic of our Smart Home Automation project revolves around the core concept of managing and controlling smart devices in a home. Here's a brief overview:
+            </p>
+            <ul>
+                <li><strong>Users:</strong> Users can register and log in to manage their homes.</li>
+                <li><strong>Homes:</strong> Users can add multiple homes to their profiles.</li>
+                <li><strong>Areas:</strong> Within each home, users can define various areas (like the living room, kitchen, etc.).</li>
+                <li><strong>Devices:</strong> Users can add smart devices (lights, TVs, thermostats, etc.) to each area and control them remotely.</li>
+                <li><strong>Control and Automation:</strong> The application allows users to control the state of each device (like turning off a light or setting a thermostat) and can include automation features based on user preferences.</li>
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2>Technologies Used</h2>
+            <p>
+                Apart from Django, we use a variety of technologies including:
+            </p>
+            <ul>
+                <li>Bootstrap 4 for responsive frontend design.</li>
+                <li>Django REST Framework for building APIs.</li>
+                <li>JavaScript and AJAX for dynamic content updates.</li>
+                <li>SQL databases for data storage and management.</li>
+            </ul>
+        </section>
+    </div>
+
+{% endblock content %}

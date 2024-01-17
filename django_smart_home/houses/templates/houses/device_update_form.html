@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<script>
+    function showDeviceForm() {
+
+        const deviceTypeValue = document.getElementById("id_device_type").value;
+        const valueText = document.getElementById("id_device_type")[deviceTypeValue].text;
+        // Hide all forms initially
+        document.getElementById("light-form").style.display = "none";
+        document.getElementById("tv-form").style.display = "none";
+        document.getElementById("door-form").style.display = "none";
+        document.getElementById("thermostat-form").style.display = "none";
+
+        if (valueText === "Light") {
+            document.getElementById("light-form").style.display = "block";
+        } else if (valueText === "Tv") {
+            document.getElementById("tv-form").style.display = "block";
+        } else if (valueText === "Thermostat") {
+            document.getElementById("thermostat-form").style.display = "block";
+        } else if (valueText === "Door") {
+            document.getElementById("door-form").style.display = "block";
+        }
+}
+</script>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ device_type_form|crispy  }}
+    <div id="light-form" style="display:none;">
+        {{ light_form|crispy }}
+    </div>
+    <div id="tv-form" style="display:none;">
+        {{ tv_form|crispy }}
+    </div>
+    <div id="door-form" style="display:none;">
+        {{ door_form|crispy }}
+    </div>
+    <div id="thermostat-form" style="display:none;">
+        {{ thermostat_form|crispy }}
+    </div>
+    <button type="submit">Update Device</button>
+
+</form>
+<script>
+    document.getElementById("id_device_type").onchange = showDeviceForm;
+</script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if key == 'create' %}
+    <h2>Add New Room</h2>
+{% elif key == 'update' %}
+  <h2>Update Room</h2>
+{% endif %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+
+      {% if key == 'create' %}
+        <button type="submit" class="btn btn-primary">Create Room</button>
+    {% elif key == 'update' %}
+      <button type="submit" class="btn btn-primary">Update Room</button>
+    {% endif %}
+  </form>
+  <a href="{% url 'house-list' %}">Back to Houses</a>
+{% endblock %}

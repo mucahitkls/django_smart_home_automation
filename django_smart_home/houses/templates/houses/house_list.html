@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>My Houses</h2>
+    <a href="{% url 'house-add' %}" class="btn btn-primary mb-3">Add New House</a>
+
+    {% for house in houses %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h5 class="card-title">{{ house.name }}</h5>
+                </div>
+                <div class="col-md-4 text-right">
+                    <a href="{% url 'house-detail' house.id %}" class="btn btn-info">View Details</a>
+                    <!-- Delete and Update buttons can be added here -->
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'house-delete' house.id %}" class="btn btn-danger">Delete House</a>
+            <a href="{% url 'house-update' house.id %}" class="btn btn-secondary">Update House</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No houses available.</p>
+    {% endfor %}
+</div>
+{% endblock content %}

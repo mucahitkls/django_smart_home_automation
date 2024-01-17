@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Room: {{ room.name }} Devices</h2>
+    <a href="{% url 'device-add' house.id room.id %}" class="btn btn-primary mb-3">Add New Device</a>
+    <a href="{% url 'room-detail' house.id room.id %}" class="btn btn-primary mb-3">View Room Details</a>
+
+    {% for device in devices %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h5 class="card-title">{{ device.name }}</h5>
+                </div>
+                <div class="col-md-4 text-right">
+                    <!-- Delete and Update buttons can be added here -->
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'device-delete' house.id room.id device.id %}" class="btn btn-danger">Delete Device</a>
+            <a href="{% url 'device-update' house.id room.id device.id %}" class="btn btn-secondary">Update Device</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No device available.</p>
+    {% endfor %}
+</div>
+{% endblock content %}
