@@ -1,0 +1,228 @@
+.gitginore
+./
+.cfg
+*.cfg
+bin/*
+bin/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+__pycache__/*
+*/__pycache__/
+*.py[cod]
+*$py.class
+.pyc
+*.pyc
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# profiling data
+.prof
+
+# vscode
+.vscode/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# dotenv environment variables file
+.env
+
+# JetBrains IDEs
+.idea/
+
+# VS Code
+.vscode/
+
+# Node modules
+node_modules/
+mucahitkeles@192 django_smart_home_automation % vim .gitignore
+mucahitkeles@192 django_smart_home_automation % ls
+README.md		img.png			test.py
+django_project		manage.py		users
+home			media
+houses			requirements.txt
+mucahitkeles@192 django_smart_home_automation % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+mucahitkeles@192 django_smart_home_automation % git brache
+git: 'brache' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+mucahitkeles@192 django_smart_home_automation % git branch
+* main
+mucahitkeles@192 django_smart_home_automation % ls
+README.md		img.png			test.py
+django_project		manage.py		users
+home			media
+houses			requirements.txt
+mucahitkeles@192 django_smart_home_automation % ls
+README.md	django_project	houses		media		users
+db.sqlite3	home		manage.py	test.py
+mucahitkeles@192 django_smart_home_automation % ls -lah
+total 456
+drwxr-xr-x  14 mucahitkeles  staff   448B Jan 17 14:24 .
+drwxr-xr-x   8 mucahitkeles  staff   256B Jan 17 14:24 ..
+drwxr-xr-x  14 mucahitkeles  staff   448B Jan 17 14:20 .git
+-rw-r--r--   1 mucahitkeles  staff   1.5K Jan 17 14:18 .gitignore
+drwxr-xr-x   9 mucahitkeles  staff   288B Jan 17 14:22 .idea
+-rw-r--r--   1 mucahitkeles  staff   2.1K Jan 17 14:05 README.md
+-rw-r--r--   1 mucahitkeles  staff   212K Jan 17 14:15 db.sqlite3
+drwxr-xr-x   8 mucahitkeles  staff   256B Jan 17 14:09 django_project
+drwxr-xr-x  12 mucahitkeles  staff   384B Jan 17 14:09 home
+drwxr-xr-x  14 mucahitkeles  staff   448B Jan 17 14:15 houses
+-rw-r--r--   1 mucahitkeles  staff   692B Jan 17 14:05 manage.py
+drwxr-xr-x   5 mucahitkeles  staff   160B Jan 17 14:06 media
+-rw-r--r--   1 mucahitkeles  staff   178B Jan 17 14:05 test.py
+drwxr-xr-x  13 mucahitkeles  staff   416B Jan 17 14:09 users
+mucahitkeles@192 django_smart_home_automation % vim .gitignore
+
+
+
+
+
+# pytype static type analyzer
+.pytype/
+
+# profiling data
+.prof
+
+# vscode
+.vscode/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# dotenv environment variables file
+.env
+
+# JetBrains IDEs
+.idea/
+
+# VS Code
+.vscode/
+
+# Node modules
+node_modules/
